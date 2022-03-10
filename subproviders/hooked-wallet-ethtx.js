@@ -38,7 +38,7 @@ function HookedWalletEthTxSubprovider(opts) {
     })
   }
   
-  self.eth_signTypedData = self.signTransaction
+  self.signTypedData = self.signTransaction
 
   self.signMessage = function(msgParams, cb) {
     opts.getPrivateKey(msgParams.from, function(err, privateKey) {
